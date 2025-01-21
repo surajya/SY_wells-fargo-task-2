@@ -27,5 +27,6 @@ public class Portfolio {
     @Column(nullable = false)
     private LocalDateTime updatedAt;
 
-    private long clientId;
+    @ManyToOne
+    private Client clientId;
 }

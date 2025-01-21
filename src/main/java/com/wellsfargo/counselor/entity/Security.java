@@ -36,6 +36,6 @@ public class Security {
     @Column(nullable = false)
     private LocalDateTime updatedAt;
 
-
-    private long portfolioId;
+    @ManyToOne
+    private Portfolio portfolio;
 }

@@ -36,5 +36,6 @@ public class Client {
     @Column(nullable = false)
     private LocalDateTime updatedAt;
 
-    private long advisorId;
+    @ManyToOne
+    private Advisor advisor;
 }

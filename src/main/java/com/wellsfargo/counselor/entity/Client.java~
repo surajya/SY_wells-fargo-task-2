@@ -5,35 +5,36 @@ import lombok.*;
 
 import java.time.LocalDateTime;
 
-@Getter @Setter @ToString @AllArgsConstructor @NoArgsConstructor
+@Getter
+@Setter
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
+
 @Entity
-public class Security {
+public class Client {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long securityId;
+    @Getter(AccessLevel.NONE)
+    @Setter(AccessLevel.NONE)
+    private long clientId;
 
     @Column(nullable = false)
     private String name;
 
     @Column(nullable = false)
-    private LocalDateTime purchaseDate;
+    private String email;
 
     @Column(nullable = false)
-    private double purchasePrice;
+    private long phoneNumber;
 
     @Column(nullable = false)
-    private int qualtity;
-
-    @Column(nullable = false)
-    private String category;
-
-    @Column(nullable = false)
+    private String address;
     private LocalDateTime createdAt;
 
     @Column(nullable = false)
     private LocalDateTime updatedAt;
 
-
-    private long portfolioId;
+    private long advisorId;
 }
