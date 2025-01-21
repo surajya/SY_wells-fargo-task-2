@@ -11,8 +11,6 @@ public class Advisor {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    @Getter(AccessLevel.NONE)
-    @Setter(AccessLevel.NONE)
     private long advisorId;
 
     @Column(nullable = false)
